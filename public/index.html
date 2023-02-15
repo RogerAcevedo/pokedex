@@ -1,43 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Pokedex</title>
+</head>
+<body>
+  <div class="pokedex">
+    <div class="left-container">
+      <div class="left-container__top-section">
+        <div class="top-section__blue"></div>
+        <div class="top-section__small-buttons">
+          <div class="top-section__red"></div>
+          <div class="top-section__yellow"></div>
+          <div class="top-section__green"></div>
+        </div>
+      </div>
+      <div class="left-container__main-section-container">
+        <div class="left-container__main-section">
+          <div class="main-section__white">
+            <div class="main-section__black">
+              <!-- ? HIDES OUR DISPLAY (BLACK) -delete high to display visible context without API-->
+                  <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+              <div class="main-screen hide">
+                <div class="screen__header">
+                  <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+                  <span class="poke-name"></span>
+                  <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+                  <span class="poke-id"></span>
+                </div>
+                <div class="screen__image">
+                  <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+                  <img src="" class="poke-front-image" alt="front">
+                  <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+                  <img src="" class="poke-back-image" alt="back">
+                </div>
+                <div class="screen__description">
+                  <div class="stats__types">
+                    <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+                    <span class="poke-type-one"></span>
+                    <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+                    <span class="poke-type-two"></span>
+                  </div>
+                  <div class="screen__stats">
+                    <p class="stats__weight">
+                      <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+                      Weight: <span class="poke-weight"></span>
+                    </p>
+                    <p class="stats__height">
+                      <!-- ? DOM OBJECT being exported into App.jsx in query selector  -->
+                      Height: <span class="poke-height"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-container__controllers">
+            <div class="controllers__d-pad">
+              <div class="d-pad__cell top"></div>
+              <div class="d-pad__cell left"></div>
+              <div class="d-pad__cell middle"></div>
+              <div class="d-pad__cell right"></div>
+              <div class="d-pad__cell bottom"></div>
+            </div>
+            <div class="controllers__buttons">
+              <div class="buttons__button">B</div>
+              <div class="buttons__button">A</div>
+            </div>
+          </div>
+        </div>
+        <div class="left-container__right">
+          <div class="left-container__hinge"></div>
+          <div class="left-container__hinge"></div>
+        </div>
+      </div>
+    </div>
+    <div class="right-container">
+      <div class="right-container__black">
+        <div class="right-container__screen">
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+          <div class="list-item"></div>
+        </div>
+      </div>
+      <div class="right-container__buttons">
+        <div class="left-button">Prev</div>
+        <div class="right-button">Next</div>
+      </div>
+    </div>
+  </div>
+  <script src="App.js"></script>
+</body>
 </html>
+
